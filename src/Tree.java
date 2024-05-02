@@ -13,7 +13,19 @@ public class Tree<T extends Comparable<T>> {
     public void insert(T newData) {
         // newData < data
         if (newData.compareTo(this.data) < 0) {
-
+            if (left == null) {
+                left = new Tree<>(newData);
+            } else {
+                left.insert(newData);
+            }
+        } else if (newData.compareTo(this.data) > 0) {
+            if (right == null) {
+                right = new Tree<>(newData);
+            } else {
+                right.insert(newData);
+            }
+        } else {
+            System.out.println("Error: Data already exists in the tree.");
         }
     }
 
@@ -26,13 +38,15 @@ public class Tree<T extends Comparable<T>> {
     }
 
     public void inorder() {
+        System.out.print("<");
         if (left != null) {
             left.inorder();
         }
-        System.out.print(data + " ");
+        System.out.print(data);
         if (right != null) {
             right.inorder();
         }
+        System.out.print(">");
     }
 
     public void preorder() {
