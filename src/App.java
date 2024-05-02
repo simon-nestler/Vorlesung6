@@ -27,7 +27,7 @@ public class App {
         o.setLeft(x);
         o.setRight(y);
 
-        System.out.println(tree);
+        tree.inorder();
 
     }
 }

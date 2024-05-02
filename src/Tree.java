@@ -18,4 +18,14 @@ public class Tree<T> {
         this.right = right;
     }
 
+    public void inorder() {
+        if (left != null) {
+            left.inorder();
+        }
+        System.out.print(data + " ");
+        if (right != null) {
+            right.inorder();
+        }
+    }
+
 }
