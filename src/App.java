@@ -27,7 +27,7 @@ public class App {
         o.setLeft(x);
         o.setRight(y);
 
-        tree.inorder();
+        tree.postorder();
 
     }
 }

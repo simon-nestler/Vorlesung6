@@ -28,4 +28,23 @@ public class Tree<T> {
         }
     }
 
+    public void preorder() {
+        System.out.print(data + " ");
+        if (left != null) {
+            left.preorder();
+        }
+        if (right != null) {
+            right.preorder();
+        }
+    }
+
+    public void postorder() {
+        if (left != null) {
+            left.postorder();
+        }
+        if (right != null) {
+            right.postorder();
+        }
+        System.out.print(data + " ");
+    }
 }
