@@ -1,4 +1,4 @@
-public class Tree<T> {
+public class Tree<T extends Comparable<T>> {
 
     private T data;
     private Tree<T> left;
@@ -8,6 +8,13 @@ public class Tree<T> {
         this.data = data;
         this.left = null;
         this.right = null;
+    }
+
+    public void insert(T newData) {
+        // newData < data
+        if (newData.compareTo(this.data) < 0) {
+
+        }
     }
 
     public void setLeft(Tree<T> left) {
